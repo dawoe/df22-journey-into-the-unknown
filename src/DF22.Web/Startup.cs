@@ -1,3 +1,6 @@
+using DF22.Web.NotificationHandlers;
+using Umbraco.Cms.Core.Notifications;
+
 namespace DF22.Web
 {
     public class Startup
@@ -33,6 +36,7 @@ namespace DF22.Web
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .AddNotificationHandler<SendingAllowedChildrenNotification, SendingAllowedChildrenNotificationHandler>()
                 .Build();
         }
 
@@ -60,6 +64,7 @@ namespace DF22.Web
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
                 });
+
         }
     }
 }
