@@ -154,6 +154,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string HeroHeader => this.Value<string>(_publishedValueFallback, "heroHeader");
 
 		///<summary>
+		/// Is Under Maintenance
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[ImplementPropertyType("isUnderMaintenance")]
+		public virtual bool IsUnderMaintenance => this.Value<bool>(_publishedValueFallback, "isUnderMaintenance");
+
+		///<summary>
 		/// Logo: Optional. If you add a logo it'll be used in the upper left corner instead of the site name. Make sure to use a transparent logo for best results
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
