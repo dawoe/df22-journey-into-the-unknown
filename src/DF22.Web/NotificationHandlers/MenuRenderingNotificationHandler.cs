@@ -5,7 +5,7 @@ using Umbraco.Cms.Web.Common.PublishedModels;
 
 namespace DF22.Web.NotificationHandlers
 {
-    public class MenuRenderingNotificationHandler : INotificationHandler<MenuRenderingNotification>
+    internal sealed class MenuRenderingNotificationHandler : INotificationHandler<MenuRenderingNotification>
     {
         private readonly IUmbracoContextAccessor _umbracoContextAccessor;
 

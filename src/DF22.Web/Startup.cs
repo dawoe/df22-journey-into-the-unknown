@@ -38,6 +38,7 @@ namespace DF22.Web
                 .AddComposers()
                 .AddNotificationHandler<SendingAllowedChildrenNotification, SendingAllowedChildrenNotificationHandler>()
                 .AddNotificationHandler<MenuRenderingNotification, MenuRenderingNotificationHandler>()
+                .AddNotificationHandler<SendingContentNotification, SendingContentNotificationHandler>()
                 .Build();
         }
 
