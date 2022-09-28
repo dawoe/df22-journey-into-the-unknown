@@ -37,6 +37,7 @@ namespace DF22.Web
                 .AddWebsite()
                 .AddComposers()
                 .AddNotificationHandler<SendingAllowedChildrenNotification, SendingAllowedChildrenNotificationHandler>()
+                .AddNotificationHandler<MenuRenderingNotification, MenuRenderingNotificationHandler>()
                 .Build();
         }
 
