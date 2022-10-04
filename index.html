@@ -43,10 +43,62 @@
         <section>
           <h2>Today is about</h2>
           <p>Improving the editor experience</p>
-          <p class="fragment">Changing the request pipeline</p>         
+          <p class="fragment">Hooking into the request pipeline</p>         
           <aside class="notes"></aside>
         </section>
 		
+		<section>
+			<h1>Improving the editor experience</h1>
+			<aside class="notes">
+				- Done by installing packages
+				- Creating custom editors
+				- Doctype setup (icons, labels, description, tabs)
+				- But can also be done by hooking into various notifications in Umbraco
+			</aside>
+		</section>
+
+		<section>
+			<h2>Limiting the page create menu</h2>
+			<p class="fragment">Handle SendingAllowedChildrenNotification</p>
+			<p class="fragment">New since 9.5</p>
+			<aside class="notes">
+				- If only one settings node is needed, prevent editors from creating more than one
+				- Often solved, by removing it from allowed children in doctype configuration.
+			</aside>
+		</section>
+
+		<section>
+			<h2>Removing the delete action</h2>
+		</section>
+
+		<section>
+			<h2>Removing the unpublish action</h2>
+		</section>
+
+		<section>
+			<h2>Hiding properties and tabs</h2>
+		</section>
+
+		<section>
+			<h1>Hooking into the request pipeline</h1>
+		</section>
+
+		<section>
+			<h2>Replacing content</h2>
+		</section>
+
+		<section>
+			<h2>Change url segment generation</h2>
+		</section>
+
+		<section>
+			<h2>Changing paths</h2>
+		</section>
+
+		<section>
+			<h2>Virtual routes</h2>
+		</section>
+
        <section>
           <h2 style="display:flex; flex-direction:column"><span>Thank you</span></h2>
          
