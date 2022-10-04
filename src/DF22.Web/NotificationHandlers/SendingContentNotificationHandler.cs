@@ -28,6 +28,7 @@ namespace DF22.Web.NotificationHandlers
             }
 
             this.HideMaintenanceProperty(notification);
+            //this.HideSettingsGroup(notification);
         }
 
         private void HideMaintenanceProperty(SendingContentNotification notification)
@@ -42,6 +43,17 @@ namespace DF22.Web.NotificationHandlers
                             (tab.Properties ?? Array.Empty<ContentPropertyDisplay>()).Where(x =>
                                 x.Alias != "isUnderMaintenance");
                     }
+                }
+            }
+        }
+
+        private void HideSettingsGroup(SendingContentNotification notification)
+        {
+            if (notification.Content.ContentTypeAlias.Equals(Home.ModelTypeAlias))
+            {
+                foreach (var variant in notification.Content.Variants)
+                {
+                    variant.Tabs = variant.Tabs.Where(x => x.Alias != "settings");
                 }
             }
         }
