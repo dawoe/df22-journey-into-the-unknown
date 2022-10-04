@@ -21,14 +21,13 @@ namespace DF22.Web.NotificationHandlers
 
             var user = this._backOfficeSecurityAccessor.BackOfficeSecurity?.CurrentUser;
 
-            if (user != null && user.Groups.Any(x => x.Alias == Umbraco.Cms.Core.Constants.Security.AdminGroupAlias) ==
-                false)
+            if (user != null && user.Groups.Any(x => x.Alias == Umbraco.Cms.Core.Constants.Security.AdminGroupAlias))
             {
-                // hide properties for non admins
-                this.HideMaintenanceProperty(notification);
+                // don't hide for admins
+                return;
             }
 
-           
+            this.HideMaintenanceProperty(notification);
         }
 
         private void HideMaintenanceProperty(SendingContentNotification notification)
