@@ -1,6 +1,36 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.MaintenancePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Media
+@using Umbraco.Cms.Core.Models
+@inject IImageUrlGenerator _imageUrlGenerator;
 @{
 	Layout = null;
 }
+
+<html>
+<head>
+    <title>@Model.Name</title>
+    
+    <style type="text/css">
+        .maintenance {
+            width: 1024px;
+            height: 768px;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+    
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="maintenance">
+
+        <img src="@_imageUrlGenerator.GetImageUrl(new ImageUrlGenerationOptions("/img/under-construction.png") { Width = 1024, Height = 768, ImageCropMode = ImageCropMode.Max, ImageCropAnchor = ImageCropAnchor.Center, Quality = 85, FurtherOptions = "format=webp"})" alt="Under construction" />
+</div>
+</body>
+</html>

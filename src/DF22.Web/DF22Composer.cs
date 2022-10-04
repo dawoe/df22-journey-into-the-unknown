@@ -16,6 +16,7 @@ namespace DF22.Web
                     SendingAllowedChildrenNotificationHandler>();
             builder.AddNotificationHandler<MenuRenderingNotification, MenuRenderingNotificationHandler>();
             builder.AddNotificationHandler<SendingContentNotification, SendingContentNotificationHandler>();
+            builder.AddNotificationHandler<RoutingRequestNotification, RoutingRequestNotificationHandler>();
 
             // register custom search fields
             builder.Services.AddUnique<IUmbracoTreeSearcherFields, CustomSearchFields>();
