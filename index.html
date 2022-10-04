@@ -61,6 +61,7 @@
 			<h2>Limiting the page create menu</h2>
 			<p class="fragment">Handle SendingAllowedChildrenNotification</p>
 			<p class="fragment">New since 9.5</p>
+			<p class="fragment">Is raised when the create menu is clicked and doctype options are shown.</p>
 			<aside class="notes">
 				- If only one settings node is needed, prevent editors from creating more than one
 				- Often solved, by removing it from allowed children in doctype configuration.
@@ -69,15 +70,19 @@
 
 		<section>
 			<h2>Removing the delete action</h2>
+			<p class="fragment">Handle <a href="https://our.umbraco.com/Documentation/Extending/Section-Trees/Trees/#menurenderingnotification">MenuRenderingNotification</a> </p>
+			<p class="fragment">Is raised whenever a menu is generated for a tree node.</p>
 		</section>
 
 		<section>
 			<h2>Removing the unpublish action</h2>
+			<p class="fragment">Handle <a href="https://our.umbraco.com/Documentation/Reference/Notifications/EditorModel-Notifications/">SendingContentNotification</a></p>
+			<p class="fragment">Raised right before the editor model is sent for editing in the content section.</p>			
 		</section>
 
-		<section>
+		<!-- <section>
 			<h2>Hiding properties and tabs</h2>
-		</section>
+		</section> -->
 
 		<section>
 			<h1>Hooking into the request pipeline</h1>
