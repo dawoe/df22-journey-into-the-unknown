@@ -1,0 +1,116 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url("//hello.myfonts.net/count/39ec0b");
+
+@font-face {
+  font-family: "GalanoGrotesque";
+  src:
+    url("/dist/theme/fonts/39EC0B_11_0.woff2") format("woff2"),
+    url("/dist/theme/fonts/39EC0B_11_0.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GalanoGrotesque";
+  src:
+    url("/dist/theme/fonts/39EC0B_4_0.woff2") format("woff2"),
+    url("/dist/theme/fonts/39EC0B_4_0.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GalanoGrotesque";
+  src:
+    url("/dist/theme/fonts/39EC0B_5_0.woff2") format("woff2"),
+    url("/dist/theme/fonts/39EC0B_5_0.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newzald";
+  src:
+    url("/dist/theme/fonts/NewzaldWeb-Book.woff2") format("woff2"),
+    url("/dist/theme/fonts/NewzaldWeb-Book.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newzald";
+  src:
+    url("/dist/theme/fonts/NewzaldWeb-Black.woff2") format("woff2"),
+    url("/dist/theme/fonts/NewzaldWeb-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #191919;
+
+$mainColor: #fff;
+$headingColor: #ff2345;
+
+$mainFontSize: 42px;
+$mainFont: 'Newzald', Helvetica, sans-serif;
+$headingFont: 'GalanoGrotesque', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #ff2345;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+#dc-logo {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    z-index: 10000; }
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+pre code {
+  font-size:1rem;
+  line-height: 1.1rem;
+}
+
+pre code.large {
+  font-size:2rem;
+  line-height: 2.2rem;
+}
+
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.2;
+}
+
+.reveal .hljs.has-highlights tr.highlight-line {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
