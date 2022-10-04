@@ -4,7 +4,7 @@ using IContentBase = Umbraco.Cms.Core.Models.IContentBase;
 
 namespace DF22.Web.Routing.UrlSegmentProviders
 {
-    public  class ProductUrlSegmentProvider : IUrlSegmentProvider
+    internal sealed class ProductUrlSegmentProvider : IUrlSegmentProvider
     {
         private readonly IShortStringHelper shortStringHelper;
 

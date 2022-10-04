@@ -1,5 +1,6 @@
 ﻿using DF22.Web.BackOffice;
 using DF22.Web.NotificationHandlers;
+using DF22.Web.Routing.UrlProviders;
 using DF22.Web.Routing.UrlSegmentProviders;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.Notifications;
@@ -24,6 +25,7 @@ namespace DF22.Web
 
             // register routing stuff
             builder.UrlSegmentProviders().Insert<ProductUrlSegmentProvider>();
+            builder.UrlProviders().Insert<BlogUrlProvider>();
         }
     }
 }
