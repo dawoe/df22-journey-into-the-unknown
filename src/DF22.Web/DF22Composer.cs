@@ -1,5 +1,6 @@
 ﻿using DF22.Web.BackOffice;
 using DF22.Web.NotificationHandlers;
+using DF22.Web.Routing.UrlSegmentProviders;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Infrastructure.Examine;
@@ -20,6 +21,9 @@ namespace DF22.Web
 
             // register custom search fields
             builder.Services.AddUnique<IUmbracoTreeSearcherFields, CustomSearchFields>();
+
+            // register routing stuff
+            builder.UrlSegmentProviders().Insert<ProductUrlSegmentProvider>();
         }
     }
 }
