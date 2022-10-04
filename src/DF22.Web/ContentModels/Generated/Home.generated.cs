@@ -175,5 +175,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("sitename")]
 		public virtual string Sitename => this.Value<string>(_publishedValueFallback, "sitename");
+
+		///<summary>
+		/// Some other setting
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("someOtherSetting")]
+		public virtual string SomeOtherSetting => this.Value<string>(_publishedValueFallback, "someOtherSetting");
 	}
 }
