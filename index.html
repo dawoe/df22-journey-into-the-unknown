@@ -85,6 +85,12 @@
 		</section> -->
 
 		<section>
+			<h2>Customizing backend search</h2>
+			<p class="fragment">By default only a few fields are searched.</p>
+			<p class="fragment">Can be extended by replacing the the implementation of <a href="https://our.umbraco.com/Documentation/Extending/Backoffice-Search/">IUmbracoTreeSearcherFields</a></p>
+		</section>
+
+		<section>
 			<h1>Hooking into the request pipeline</h1>			
 		</section>
 
@@ -95,7 +101,19 @@
 		</section>
 
 		<section>
-			<h2>Change url segment generation</h2>
+			<h2>Changing url segment</h2>
+			<p>By default the url segment of a content node will be based its name.</p>
+			<p class="fragment">"Dutch User Group" will become "dutch-user-group"</p>
+		</section>
+
+		<section>
+			<h2>Changing url segment</h2>
+			<p>Can be customized by implementing a <a href="https://our.umbraco.com/Documentation/Reference/Routing/Request-Pipeline/outbound-pipeline#url-segment-provider">Url segment provider</a></p>			
+		</section>
+
+		<section>
+			<h2>Changing url segment</h2>
+			<p>Generated segments are stored with the content item in cache.</p>			
 		</section>
 
 		<section>
