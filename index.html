@@ -33,6 +33,7 @@
             <li>Umbraco MVP (7x)</li>
             <li>Active community member since 2008</li>
 			<li>Part of the 24 days in Umbraco team</li>
+			<li>Part of the Umbraco Packages Community team.</li>
           </ul>
           <aside class="notes">
             Data drive agency with offices in r'dam, heerlen and curacoa<br />
@@ -118,12 +119,39 @@
 
 		<section>
 			<h2>Changing paths</h2>
+			<p>By default umbraco builds up the path of a item based on the generated url segments</p>
+		</section>
+
+		<section>
+			<h2>Changing paths</h2>
+			<p>This can be customized by implementing a <a href="https://our.umbraco.com/Documentation/Reference/Routing/Request-Pipeline/outbound-pipeline#custom-url-provider">Custom url provider.</a></p>
+		</section>
+
+		<section>
+			<h2>Changing paths</h2>
+			<p>Paths are not cached and generated on the fly.</p>
+		</section>
+
+		<section>
+			<h2>Changing paths</h2>
+			<p>The generated path can't be connected to a content item by Umbraco.</p>
+			<p></p>
+		</section>
+
+		<section>
+			<h2>Changing paths</h2>
+			<p>This needs to be handled by implementing a <a href="https://our.umbraco.com/Documentation/Reference/Routing/Request-Pipeline/IContentFinder">Content finder.</a></p>			
 		</section>
 
 		<section>
 			<h2>Virtual routes</h2>
+			<p>Think of custom routes that are executed in the context of a content item.</p>
 		</section>
 
+		<section>
+			<h2>Virtual routes</h2>
+			<p>Done by creating a controller that implements <a href="https://our.umbraco.com/documentation/Reference/Routing/Custom-Routes/#custom-route-with-ivirtualpagecontroller">IVirtualPageController</a>.</p>
+		</section>
        <section>
           <h2 style="display:flex; flex-direction:column"><span>Thank you</span></h2>
          
