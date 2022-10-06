@@ -13,7 +13,7 @@ namespace DF22.Web.Routing.UrlProviders
                 return null;
             }
 
-            var path = $"{blogpost.Parent!.Url().EnsureEndsWith("/")}{blogpost.CreateDate.Year}/{blogpost.UrlSegment}/";
+            var path = $"{blogpost.Parent!.Url(mode : mode).EnsureEndsWith("/")}{blogpost.CreateDate.Year}/{blogpost.UrlSegment}/";
 
             return new UrlInfo(path, true, culture);
         }
